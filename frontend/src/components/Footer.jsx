@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from 'react';
-
-function Footer() {
-  const [showFooter, setShowFooter] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
-      const isScrolledToBottom = scrollTop + clientHeight >= scrollHeight;
-
-      setShowFooter(isScrolledToBottom);
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+import React from "react";
+import { Link } from "react-router-dom";
+const Footer = () => {
+  
   return (
-    <footer className={`footer ${showFooter ? 'show' : ''}`}>
-      <div className="container text-center">
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
+  //   <div className="footer-part ">
+  //   <div
+  //     className="text-center text-white"
+  //     style={{ backgroundColor: "#3f51b5" }}
+  //   >
+  //       <hr className="" />
+  //         <div className="row d-flex justify-content-center">
+  //             <p>"Live as if you were to die tomorrow. Learn as if you were to live forever." - Mahatma Gandhi</p>
+  //             <p>"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
+  //             <p>"An investment in knowledge pays the best interest." - Benjamin Franklin</p>
+  //         </div>
+  //     <div
+  //       className="text-center p-3"
+  //       style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" ,fontSize:"1.25rem" }}
+  //     >
+  //       <p className="text-white">
+  //       LearnHub -Today's actions shape tomorrow's destiny
+  //       </p>
+  //     </div>
+  //   </div>
+  //   </div>
+  // );
+};
 
 export default Footer;

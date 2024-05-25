@@ -170,26 +170,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* CSS */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #343a40;
-  color: white; 
-  padding: 20px; 
-  text-align: center; 
-  z-index: -1; 
-  opacity: 0;
-  transition: opacity 0.3s ease; 
-}
-
-.footer.show {
-  opacity: 1; 
-}
-
-
 /*login*/
 /* Container styles */
 .login-container {
@@ -392,4 +372,39 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* course details css*/
+.course-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.course-container:hover .course-title:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-image:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.enroll-button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-part{
+  height:300px;
+  padding:0;
+  bottom:0;
+  left:0;
+}
+.footer-container{
+  display:flex;
+  justify-items:center;
+  justify-content: space-around;
+  align-items: center;
+  padding:1rem;
+  margin-bottom:0px;
 }
